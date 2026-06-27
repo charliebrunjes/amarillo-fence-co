@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        gold: {
+          DEFAULT: "#D4920A",
+          hover: "#B87D08",
+        },
+        dark: "#111111",
+        secondary: "#6B6B6B",
+        "off-white": "#F5F5F5",
+        border: "#E5E5E5",
+      },
+      fontFamily: {
+        oswald: ["var(--font-oswald)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
