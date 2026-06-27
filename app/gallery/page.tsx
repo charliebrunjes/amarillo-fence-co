@@ -1,39 +1,42 @@
 import type { Metadata } from "next";
-import GalleryClient from "./GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Fence Installation Gallery",
+  title: "Gallery",
   description:
-    "Browse photos of Amarillo fence installations — wood fences, chain link, vinyl, and gate projects. See the quality of Amarillo Fence Co.'s work.",
+    "Photos of our Amarillo fence installations — coming soon. Wood, chain link, vinyl, and gate work by Amarillo Fence Co.",
   openGraph: {
-    title: "Fence Gallery | Amarillo Fence Co.",
-    description:
-      "See our work — wood, chain link, vinyl, and gate installations across Amarillo, TX.",
+    title: "Gallery | Amarillo Fence Co.",
+    description: "Photos of our Amarillo fence work — coming soon.",
     url: "https://amarillofenceco.com/gallery",
   },
 };
 
 export default function GalleryPage() {
   return (
-    <>
-      {/* Hero */}
-      <section className="bg-dark px-6 py-28 text-white">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-            Our Work
-          </p>
-          <h1 className="font-oswald text-5xl font-bold leading-tight md:text-6xl">
-            Fence <span className="text-gold">Gallery</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-white/60">
-            Browse recent Amarillo fence installations — wood, chain link,
-            vinyl, and custom gates.
-          </p>
-        </div>
-      </section>
+    <div
+      className="relative flex min-h-screen items-center justify-center"
+      style={{
+        background:
+          "repeating-linear-gradient(-7deg, #F5B800 0px, #F5B800 44px, #111111 44px, #111111 88px)",
+      }}
+    >
+      {/* Card */}
+      <div className="relative z-10 mx-6 w-full max-w-md rounded-2xl bg-white px-10 py-12 text-center shadow-2xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">
+          Gallery
+        </p>
+        <p className="mt-5 font-oswald text-2xl font-bold leading-snug text-dark md:text-3xl">
+          We&apos;re out building fences,<br />not taking selfies.
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-secondary">
+          Photos of our work coming soon. Check back after our next job.
+        </p>
+      </div>
 
-      {/* Client-side filter + grid */}
-      <GalleryClient />
-    </>
+      {/* Branding */}
+      <p className="absolute bottom-5 right-6 font-inter text-xs font-medium text-white/40">
+        Amarillo Fence Co.
+      </p>
+    </div>
   );
 }
