@@ -40,15 +40,12 @@ export default function Nav() {
         </ul>
 
         {/* Desktop CTA */}
-        <a
-          href="tel:+18065550000"
+        <Link
+          href="/book"
           className="hidden items-center gap-2 rounded-md bg-gold px-4 py-2 text-sm font-semibold text-dark transition-colors hover:bg-gold-hover md:flex"
         >
-          <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z" />
-          </svg>
-          Call Now
-        </a>
+          Book Now
+        </Link>
 
         {/* Hamburger */}
         <button
@@ -80,6 +77,13 @@ export default function Nav() {
               </li>
             ))}
           </ul>
+          <Link
+            href="/book"
+            className="mt-4 flex items-center justify-center rounded-md bg-gold px-4 py-3 text-base font-semibold text-dark"
+            onClick={() => setMenuOpen(false)}
+          >
+            Book Now
+          </Link>
         </div>
       )}
     </header>
