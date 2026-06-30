@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       from: 'Amarillo Fence Co <contact@amarillofenceco.com>',
       to: 'charlie@amarillofenceco.com',
       subject: `New Estimate Request from ${full_name}`,
-      reply_to: email,
+      replyTo: email,
       text,
     });
 
