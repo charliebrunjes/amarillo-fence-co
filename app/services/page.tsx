@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "wood",
+    slug: "/wood-fence-installation-amarillo-tx",
     name: "Wood Fence Installation",
     tagline: "Privacy · Picket · Custom Designs",
     description:
@@ -32,6 +33,7 @@ const services = [
   },
   {
     id: "chainlink",
+    slug: "/chain-link-fence-amarillo-tx",
     name: "Chain Link Fence Installation",
     tagline: "Residential · Commercial · Security",
     description:
@@ -48,6 +50,7 @@ const services = [
   },
   {
     id: "vinyl",
+    slug: "/vinyl-fence-installation-amarillo-tx",
     name: "Vinyl Fence Installation",
     tagline: "Low Maintenance · Durable · Clean Look",
     description:
@@ -64,6 +67,7 @@ const services = [
   },
   {
     id: "gates",
+    slug: "/gate-installation-amarillo-tx",
     name: "Gate Installation",
     tagline: "Automatic · Manual · Driveway Gates",
     description:
@@ -80,6 +84,7 @@ const services = [
   },
   {
     id: "repair",
+    slug: "/fence-repair-amarillo-tx",
     name: "Fence Repair",
     tagline: "All Fence Types · Post Replacement · Panel Repair",
     description:
@@ -137,12 +142,20 @@ export default function ServicesPage() {
                 <p className="mt-5 leading-relaxed text-secondary">
                   {service.description}
                 </p>
-                <Link
-                  href="/estimate"
-                  className="mt-8 inline-block rounded-md bg-gold px-7 py-3 font-semibold text-dark transition-colors hover:bg-gold-hover"
-                >
-                  {service.cta}
-                </Link>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <Link
+                    href="/estimate"
+                    className="inline-block rounded-md bg-gold px-7 py-3 font-semibold text-dark transition-colors hover:bg-gold-hover"
+                  >
+                    {service.cta}
+                  </Link>
+                  <Link
+                    href={service.slug}
+                    className="text-sm font-semibold text-gold hover:underline"
+                  >
+                    Learn more →
+                  </Link>
+                </div>
               </div>
 
               {/* Benefits */}

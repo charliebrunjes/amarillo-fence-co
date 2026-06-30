@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { getSupabaseClient } from "@/lib/supabase/client";
 
 type FormState = {
   full_name: string;
@@ -38,20 +37,12 @@ export default function EstimateForm() {
     setStatus("loading");
 
     try {
-      const supabase = getSupabaseClient();
-      const { error } = await supabase.from("fence_estimates").insert([
-        {
-          full_name: form.full_name,
-          phone: form.phone,
-          email: form.email,
-          address: form.address,
-          fence_type: form.fence_type,
-          linear_feet: form.linear_feet,
-          description: form.description || null,
-          how_heard: form.how_heard || null,
-        },
-      ]);
-      if (error) throw error;
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Request failed");
       setStatus("success");
     } catch (err) {
       console.error("Estimate submit error:", err);
@@ -74,8 +65,8 @@ export default function EstimateForm() {
         </p>
         <p className="mt-4 text-sm text-secondary">
           Questions in the meantime?{" "}
-          <a href="tel:+18065550000" className="font-semibold text-gold hover:underline">
-            Call us at (806) 555-0000
+          <a href="tel:+18068912016" className="font-semibold text-gold hover:underline">
+            Call us at (806) 891-2016
           </a>
         </p>
       </div>
@@ -87,8 +78,8 @@ export default function EstimateForm() {
       {status === "error" && (
         <div className="mb-8 rounded-xl border border-red-200 bg-red-50 px-6 py-4 text-sm text-red-700">
           Something went wrong — please{" "}
-          <a href="tel:+18065550000" className="font-semibold underline">
-            call us directly at (806) 555-0000
+          <a href="tel:+18068912016" className="font-semibold underline">
+            call us directly at (806) 891-2016
           </a>{" "}
           and we&apos;ll get you taken care of.
         </div>
@@ -235,8 +226,8 @@ export default function EstimateForm() {
 
         <p className="text-center text-xs text-secondary">
           Or call us directly:{" "}
-          <a href="tel:+18065550000" className="font-semibold text-dark">
-            (806) 555-0000
+          <a href="tel:+18068912016" className="font-semibold text-dark">
+            (806) 891-2016
           </a>
         </p>
       </form>

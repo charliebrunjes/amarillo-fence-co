@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-white/70">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <p className="font-oswald text-xl font-bold text-white">
               Amarillo <span className="text-gold">Fence Co.</span>
             </p>
@@ -38,6 +38,28 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Service pages */}
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">
+              Our Services
+            </p>
+            <ul className="space-y-2 text-sm">
+              {[
+                ["Wood Fence", "/wood-fence-installation-amarillo-tx"],
+                ["Chain Link Fence", "/chain-link-fence-amarillo-tx"],
+                ["Vinyl Fence", "/vinyl-fence-installation-amarillo-tx"],
+                ["Fence Repair", "/fence-repair-amarillo-tx"],
+                ["Gate Installation", "/gate-installation-amarillo-tx"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link href={href} className="transition-colors hover:text-gold">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">
@@ -45,13 +67,13 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="tel:+18065550000" className="transition-colors hover:text-gold">
-                  (806) 555-0000
+                <a href="tel:+18068912016" className="transition-colors hover:text-gold">
+                  (806) 891-2016
                 </a>
               </li>
               <li>
-                <a href="mailto:charles@amarillofenceco.com" className="transition-colors hover:text-gold">
-                  charles@amarillofenceco.com
+                <a href="mailto:charlie@amarillofenceco.com" className="transition-colors hover:text-gold">
+                  charlie@amarillofenceco.com
                 </a>
               </li>
               <li className="text-white/50">

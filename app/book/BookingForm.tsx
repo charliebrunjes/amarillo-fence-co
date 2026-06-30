@@ -126,7 +126,7 @@ export default function BookingForm() {
               required
               value={form.phone}
               onChange={(e) => set("phone", e.target.value)}
-              placeholder="(806) 555-0000"
+              placeholder="(806) 891-2016"
               className={inputClass}
             />
           </div>
