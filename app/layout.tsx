@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://amarillofenceco.com"),
+  metadataBase: new URL("https://www.amarillofenceco.com"),
   title: {
     template: "%s | Amarillo Fence Co. — Amarillo, TX",
     default: "Amarillo Fence Co. — Amarillo, TX",

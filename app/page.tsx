@@ -5,11 +5,14 @@ export const metadata: Metadata = {
   title: "Amarillo Fence Co. — Amarillo, TX",
   description:
     "Amarillo's most trusted fence company. Wood, chain link, and vinyl fence installation, gate installation, fence repair, and free estimates in Amarillo, TX.",
+  alternates: {
+    canonical: "https://www.amarillofenceco.com",
+  },
   openGraph: {
     title: "Amarillo Fence Co. — Amarillo, TX",
     description:
       "Licensed and insured fence installation in Amarillo and the Texas Panhandle. Free estimates.",
-    url: "https://amarillofenceco.com",
+    url: "https://www.amarillofenceco.com",
   },
 };
 
