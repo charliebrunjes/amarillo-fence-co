@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PromoBanner from "@/components/PromoBanner";
 
 export const metadata: Metadata = {
   title: "Amarillo Fence Co. — Amarillo, TX",
@@ -91,48 +92,9 @@ const pillars = [
 ];
 
 export default function HomePage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Amarillo Fence Co.",
-    description:
-      "Licensed fence installation company serving Amarillo and the Texas Panhandle.",
-    telephone: "+1-806-891-2016",
-    email: "charles@amarillofenceco.com",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Amarillo",
-      addressRegion: "TX",
-      addressCountry: "US",
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: 35.2219971,
-        longitude: -101.8312969,
-      },
-      geoRadius: "80000",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Fence Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Wood Fence Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Chain Link Fence Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vinyl Fence Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gate Installation" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Repair" } },
-      ],
-    },
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <PromoBanner />
 
       {/* ── Hero ── */}
       <section className="relative flex min-h-screen items-center justify-center bg-dark px-6 py-24 text-white">
@@ -267,6 +229,72 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Repair Special Promo ── */}
+      <section className="bg-dark px-6 py-24 text-white">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+            Limited Time Offer
+          </p>
+          <h2 className="font-oswald text-4xl font-bold md:text-5xl">
+            Limited Time Repair Special
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-white/60">
+            Quick fixes without the big-job price tag — book before August 1st.
+          </p>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-xl border border-white/10 bg-white/[0.04] px-8 py-10">
+              <p className="font-oswald text-lg font-bold uppercase tracking-wide text-gold">
+                Single Picket Replacement
+              </p>
+              <div className="mt-5 flex items-end justify-center gap-3">
+                <span className="font-oswald text-6xl font-bold leading-none text-white">$50</span>
+                <span className="mb-1 text-base text-white/40 line-through">$90</span>
+              </div>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/[0.04] px-8 py-10">
+              <p className="font-oswald text-lg font-bold uppercase tracking-wide text-gold">
+                Single Gate Tune-Up
+              </p>
+              <div className="mt-5 flex items-end justify-center gap-3">
+                <span className="font-oswald text-6xl font-bold leading-none text-white">$50</span>
+                <span className="mb-1 text-base text-white/40 line-through">$90</span>
+              </div>
+            </div>
+          </div>
+
+          <ul className="mt-10 flex flex-col items-center gap-2 text-sm text-white/50">
+            <li className="flex items-center gap-2">
+              <span className="h-px w-4 bg-gold/50" />
+              6&apos; × 5½&quot; cedar pickets
+              <span className="h-px w-4 bg-gold/50" />
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-px w-4 bg-gold/50" />
+              Materials included
+              <span className="h-px w-4 bg-gold/50" />
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-px w-4 bg-gold/50" />
+              +$10 each additional picket
+              <span className="h-px w-4 bg-gold/50" />
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-px w-4 bg-gold/50" />
+              Valid until August 1st
+              <span className="h-px w-4 bg-gold/50" />
+            </li>
+          </ul>
+
+          <Link
+            href="/estimate"
+            className="mt-10 inline-block rounded-md bg-gold px-10 py-4 font-semibold text-dark transition-colors hover:bg-gold-hover"
+          >
+            Claim This Deal
+          </Link>
         </div>
       </section>
 

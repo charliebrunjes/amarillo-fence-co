@@ -33,35 +33,23 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "Contractor",
   name: "Amarillo Fence Co.",
   description:
-    "Licensed fence installation company serving Amarillo and the Texas Panhandle. Wood, chain link, vinyl, gate installation, and fence repair.",
+    "Fence installation and repair in Amarillo, TX. Wood privacy fences, chain link, gates, and fence repair.",
   url: "https://amarillofenceco.com",
   telephone: "+1-806-891-2016",
   email: "charlie@amarillofenceco.com",
   foundingDate: "2021",
   priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "[STREET NUMBER] SW 15th Ave", // ← confirm exact street number before deploying
-    addressLocality: "Amarillo",
-    addressRegion: "TX",
-    postalCode: "79106",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 35.2219971,
-    longitude: -101.8312969,
-  },
   areaServed: [
-    {
-      "@type": "City",
-      name: "Amarillo",
-      containedInPlace: { "@type": "State", name: "Texas" },
-    },
-    { "@type": "AdministrativeArea", name: "Texas Panhandle" },
+    { "@type": "City", name: "Amarillo", containedInPlace: { "@type": "State", name: "Texas" } },
+    { "@type": "City", name: "Canyon", containedInPlace: { "@type": "State", name: "Texas" } },
+    { "@type": "City", name: "Bushland", containedInPlace: { "@type": "State", name: "Texas" } },
+  ],
+  sameAs: [
+    "https://g.page/r/CZdiScSMO5zpEBM",
+    "https://www.facebook.com/profile.php?id=61591218610155",
   ],
   openingHoursSpecification: [
     {

@@ -21,19 +21,24 @@ export async function POST(req: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Amarillo Fence Co <contact@amarillofenceco.com>',
-      to: 'charlie@amarillofenceco.com',
+      // TODO: once amarillofenceco.com is verified at resend.com/domains, change from to:
+      // 'Amarillo Fence Co <contact@amarillofenceco.com>'
+      // and change to back to: 'charlie@amarillofenceco.com'
+      from: 'Amarillo Fence Co <onboarding@resend.dev>',
+      to: process.env.RESEND_TO_EMAIL ?? 'charliebrunjes23@gmail.com',
       subject: `New Estimate Request from ${full_name}`,
       replyTo: email,
       text,
     });
 
     if (error) {
+      console.error('[contact] Resend error:', JSON.stringify(error));
       return Response.json({ error }, { status: 400 });
     }
 
     return Response.json({ data });
   } catch (e) {
-    return Response.json({ error: 'Failed to send' }, { status: 500 });
+    console.error('[contact] Exception:', e);
+    return Response.json({ error: String(e) }, { status: 500 });
   }
 }

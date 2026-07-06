@@ -77,7 +77,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-white/50">
-                Amarillo &amp; surrounding<br />Texas Panhandle
+                Amarillo, TX · Canyon · Bushland
               </li>
             </ul>
           </div>
