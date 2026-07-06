@@ -21,10 +21,7 @@ export async function POST(req: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      // TODO: once amarillofenceco.com is verified at resend.com/domains, change from to:
-      // 'Amarillo Fence Co <contact@amarillofenceco.com>'
-      // and change to back to: 'charlie@amarillofenceco.com'
-      from: 'Amarillo Fence Co <onboarding@resend.dev>',
+      from: 'Amarillo Fence Co <estimates@amarillofenceco.com>',
       to: process.env.RESEND_TO_EMAIL ?? 'charliebrunjes23@gmail.com',
       subject: `New Estimate Request from ${full_name}`,
       replyTo: email,
@@ -38,7 +35,8 @@ export async function POST(req: Request) {
 
     return Response.json({ data });
   } catch (e) {
-    console.error('[contact] Exception:', e);
+    const resendError = (e as { response?: { body?: unknown } })?.response?.body;
+    console.error('[contact] Exception:', resendError ? JSON.stringify(resendError) : e);
     return Response.json({ error: String(e) }, { status: 500 });
   }
 }
