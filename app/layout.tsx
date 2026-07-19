@@ -74,6 +74,7 @@ const localBusinessSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vinyl Fence Installation" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gate Installation" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fence Repair" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Fencing" } },
     ],
   },
 };

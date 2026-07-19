@@ -76,8 +76,8 @@ export default function BookingForm() {
         </p>
         <p className="mt-3 text-sm text-secondary">
           Need to reach us sooner?{" "}
-          <a href="tel:+18066785500" className="font-semibold text-gold hover:underline">
-            (806) 678-5500
+          <a href="tel:+18068912016" className="font-semibold text-gold hover:underline">
+            (806) 891-2016
           </a>
         </p>
       </div>
@@ -94,8 +94,8 @@ export default function BookingForm() {
       {status === "error" && (
         <div className="mb-8 rounded-xl border border-red-200 bg-red-50 px-6 py-4 text-sm text-red-700">
           Something went wrong —{" "}
-          <a href="tel:+18066785500" className="font-semibold underline">
-            call us at (806) 678-5500
+          <a href="tel:+18068912016" className="font-semibold underline">
+            call us at (806) 891-2016
           </a>{" "}
           and we&apos;ll get you scheduled.
         </div>
@@ -256,8 +256,8 @@ export default function BookingForm() {
 
         <p className="text-center text-xs text-secondary">
           Or call us directly:{" "}
-          <a href="tel:+18066785500" className="font-semibold text-dark">
-            (806) 678-5500
+          <a href="tel:+18068912016" className="font-semibold text-dark">
+            (806) 891-2016
           </a>
         </p>
       </form>
