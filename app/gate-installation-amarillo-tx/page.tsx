@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Gate Installation in Amarillo, TX",
   description:
     "Professional gate installation in Amarillo, TX. Driveway gates, walk gates, automatic gate openers, and custom sizes in wood, chain link, vinyl, and steel. Free estimates.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/gate-installation-amarillo-tx",
+  },
   openGraph: {
     title: "Gate Installation in Amarillo, TX | Amarillo Fence Co.",
     description:

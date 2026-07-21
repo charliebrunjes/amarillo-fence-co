@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Book a Free Estimate",
   description:
     "Schedule a free fence estimate with Amarillo Fence Co. Pick a time, we'll come out and give you a straight quote — no pressure, no obligation.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/book",
+  },
   openGraph: {
     title: "Book a Free Estimate | Amarillo Fence Co.",
     description:

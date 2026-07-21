@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Commercial Fencing",
   description:
     "Commercial chain link, perimeter and security fencing, repair, and subcontract work for GCs and landscapers in Amarillo, TX and the Texas Panhandle.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/commercial",
+  },
   openGraph: {
     title: "Commercial Fencing in Amarillo, TX | Amarillo Fence Co.",
     description:

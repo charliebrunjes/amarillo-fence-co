@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Fence Installation Services",
   description:
     "Wood, chain link, and vinyl fence installation, gate installation, and fence repair in Amarillo, TX. Licensed and insured. Free estimates for all Amarillo fence projects.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/services",
+  },
   openGraph: {
     title: "Fence Installation Services | Amarillo Fence Co.",
     description:

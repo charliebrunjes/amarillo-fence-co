@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Gallery",
   description:
     "Photos of our Amarillo fence installations — coming soon. Wood, chain link, vinyl, and gate work by Amarillo Fence Co.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/gallery",
+  },
   openGraph: {
     title: "Gallery | Amarillo Fence Co.",
     description: "Photos of our Amarillo fence work — coming soon.",

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Chain Link Fence Installation in Amarillo, TX",
   description:
     "Residential and commercial chain link fence installation in Amarillo, TX. Multiple heights, galvanized and vinyl-coated options. Free estimates from a local Amarillo fence company.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/chain-link-fence-amarillo-tx",
+  },
   openGraph: {
     title: "Chain Link Fence Installation in Amarillo, TX | Amarillo Fence Co.",
     description:

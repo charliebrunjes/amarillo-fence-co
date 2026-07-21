@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Locally owned fence company in Amarillo, TX. We're your neighbors — we live here, work here, and take pride in every Amarillo fence we build.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/about",
+  },
   openGraph: {
     title: "About Amarillo Fence Co.",
     description:

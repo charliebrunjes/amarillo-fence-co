@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Vinyl Fence Installation in Amarillo, TX",
   description:
     "Low-maintenance vinyl fence installation in Amarillo, TX. Privacy fences, picket fences, and ranch rail styles in white, tan, and gray. Free estimates from a local fence company.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/vinyl-fence-installation-amarillo-tx",
+  },
   openGraph: {
     title: "Vinyl Fence Installation in Amarillo, TX | Amarillo Fence Co.",
     description:

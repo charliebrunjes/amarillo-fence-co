@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Free Estimate Request",
   description:
     "Request a free fence estimate from Amarillo Fence Co. Wood, chain link, vinyl, gate installation, and fence repair in Amarillo, TX. We'll call you within 24 hours.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/estimate",
+  },
   openGraph: {
     title: "Free Fence Estimate | Amarillo Fence Co.",
     description:

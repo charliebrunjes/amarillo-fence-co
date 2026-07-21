@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Fence Repair in Amarillo, TX",
   description:
     "Professional fence repair in Amarillo, TX. Storm damage, rotted posts, leaning sections, and gate repairs on all fence types. Fast, honest quotes from a local fence company.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/fence-repair-amarillo-tx",
+  },
   openGraph: {
     title: "Fence Repair in Amarillo, TX | Amarillo Fence Co.",
     description:

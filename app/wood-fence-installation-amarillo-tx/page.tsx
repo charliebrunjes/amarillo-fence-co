@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Wood Fence Installation in Amarillo, TX",
   description:
     "Expert wood fence installation in Amarillo, TX. Privacy fences, picket fences, and custom cedar designs built to handle the Texas Panhandle climate. Free estimates.",
+  alternates: {
+    canonical: "https://amarillofenceco.com/wood-fence-installation-amarillo-tx",
+  },
   openGraph: {
     title: "Wood Fence Installation in Amarillo, TX | Amarillo Fence Co.",
     description:
