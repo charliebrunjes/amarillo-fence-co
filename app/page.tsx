@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Amarillo Fence Co. — Amarillo, TX",
     description:
-      "Licensed and insured fence installation in Amarillo and the Texas Panhandle. Free estimates.",
+      "Insured fence installation in Amarillo and the Texas Panhandle. Free estimates.",
     url: "https://amarillofenceco.com",
   },
 };
@@ -70,8 +70,8 @@ const testimonials = [
 const pillars = [
   {
     icon: "✅",
-    title: "Licensed & Insured",
-    desc: "Fully licensed and insured so you're protected on every job.",
+    title: "Insured",
+    desc: "Fully insured so you're protected on every job.",
   },
   {
     icon: "💰",
@@ -115,7 +115,7 @@ export default function HomePage() {
             Wood · Chain Link · Vinyl · Gates · Repair
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-base text-white/50">
-            Locally owned, licensed &amp; insured. Serving Amarillo and the
+            Locally owned and insured. Serving Amarillo and the
             Texas Panhandle with quality fence installation and free estimates.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

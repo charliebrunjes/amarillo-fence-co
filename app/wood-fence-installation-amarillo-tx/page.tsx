@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wood Fence Installation in Amarillo, TX | Amarillo Fence Co.",
     description:
-      "Cedar and pine privacy fences, picket fences, and custom wood fence designs in Amarillo, TX. Free estimates from a local, licensed fence company.",
+      "Cedar and pine privacy fences, picket fences, and custom wood fence designs in Amarillo, TX. Free estimates from a local fence company.",
     url: "https://amarillofenceco.com/wood-fence-installation-amarillo-tx",
   },
 };

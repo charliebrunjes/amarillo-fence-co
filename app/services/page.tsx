@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Fence Installation Services",
   description:
-    "Wood, chain link, and vinyl fence installation, gate installation, and fence repair in Amarillo, TX. Licensed and insured. Free estimates for all Amarillo fence projects.",
+    "Wood, chain link, and vinyl fence installation, gate installation, and fence repair in Amarillo, TX. Insured. Free estimates for all Amarillo fence projects.",
   alternates: {
     canonical: "https://amarillofenceco.com/services",
   },
@@ -120,7 +120,7 @@ export default function ServicesPage() {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-white/60">
             From wood privacy fences to commercial chain link, we install every
             type of fence in Amarillo and the surrounding Texas Panhandle.
-            Licensed, insured, and backed by a quality guarantee.
+            Insured and backed by a quality guarantee.
           </p>
         </div>
       </section>

@@ -12,7 +12,7 @@ export default function Footer() {
             </p>
             <p className="mt-3 text-sm leading-relaxed">
               Locally owned and operated fence installation company serving
-              Amarillo and the Texas Panhandle. Licensed, insured, and built on
+              Amarillo and the Texas Panhandle. Insured and built on
               reputation.
             </p>
           </div>
