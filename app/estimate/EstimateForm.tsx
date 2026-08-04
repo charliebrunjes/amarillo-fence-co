@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type FormState = {
   full_name: string;
@@ -25,8 +26,9 @@ const EMPTY: FormState = {
 };
 
 export default function EstimateForm() {
+  const router = useRouter();
   const [form, setForm] = useState<FormState>(EMPTY);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
   function set(field: keyof FormState, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -43,34 +45,11 @@ export default function EstimateForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
+      router.push("/estimate-received");
     } catch (err) {
       console.error("Estimate submit error:", err);
       setStatus("error");
     }
-  }
-
-  if (status === "success") {
-    return (
-      <div className="py-16 text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gold/15">
-          <svg className="h-8 w-8 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h2 className="font-oswald text-3xl font-bold text-dark">Request Received!</h2>
-        <p className="mt-5 leading-relaxed text-secondary">
-          Thanks! We&apos;ll call you within 24 hours to discuss your project and
-          schedule a time to come out for your free estimate.
-        </p>
-        <p className="mt-4 text-sm text-secondary">
-          Questions in the meantime?{" "}
-          <a href="tel:+18068912016" className="font-semibold text-gold hover:underline">
-            Call us at (806) 891-2016
-          </a>
-        </p>
-      </div>
-    );
   }
 
   return (
